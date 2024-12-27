@@ -2,6 +2,8 @@
 
 ## Description
 - This project is a continuation of the project linked here: https://github.com/RBaykan/Spring_Security_Register_Resend_Email_Verifacation_Token.
+- The passwords entered in the CreateUser model go through a specific validation. The password can be between 8 and 32 characters long, and must include English letters, numbers, and certain special characters.
+  The Passay library is used for this.
 - The registered user's password will be encrypted using the `BCrypt` algorithm and saved to the database. For testing purposes, a Login API sends a POST request with the username and password.
   The user found by the username will have the entered password compared to the encrypted password.
   If the passwords match, the user will be notified that the login was successful. If they do not match, an "invalid credentials" message will be shown.
